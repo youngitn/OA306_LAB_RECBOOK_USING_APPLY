@@ -4,3 +4,6 @@
 /TEST.class
 /f.class
 /OnChange.class
+/DoQuery$Item.class
+/DoQuery$QueryItem.class
+/QueryItem.class
