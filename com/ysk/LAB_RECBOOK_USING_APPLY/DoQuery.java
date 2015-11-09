@@ -18,8 +18,8 @@ public class DoQuery extends _hproc {
 			aString  += iterator.nextElement()+"-";
 			
 		}
-		talk t = getTalk();
-		message(t.getColumnsFromPool("select RECBOOK_NAME from LAB_RECBOOK_USING_APPLY")[0][0]);
+//		talk t = getTalk();
+		message(aString);
 
 		
 		return value;
