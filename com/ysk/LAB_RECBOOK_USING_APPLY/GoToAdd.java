@@ -1,8 +1,5 @@
 package com.ysk.LAB_RECBOOK_USING_APPLY;
 
-import com.ysp.action.GetDepNameByEmpId;
-
-
 //import com.ysk.bean.UserInfoViewBean;
 import SomeUtils._hproc;
 import SomeUtils.Bean.UserInfoViewBean;
