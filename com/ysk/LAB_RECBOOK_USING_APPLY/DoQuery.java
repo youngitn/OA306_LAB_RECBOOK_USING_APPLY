@@ -7,7 +7,7 @@ import SomeUtils.Bean.QueryItem;
 import SomeUtils.Bean.UserInfoViewBean;
 
 public class DoQuery extends _hproc {
-
+	@Override
 	public String action(String value) throws Throwable {
 
 		ArrayList<QueryItem> list = new ArrayList<QueryItem>();

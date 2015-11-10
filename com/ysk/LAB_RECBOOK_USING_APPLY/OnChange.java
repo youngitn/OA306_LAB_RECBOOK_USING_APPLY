@@ -6,7 +6,7 @@ import SomeUtils._hproc;
 import SomeUtils.Bean.UserInfoViewBean;
 
 public class OnChange extends _hproc {
-	
+	@Override
 	public String action(String value) throws Throwable {
 		String queryEmpid = getValue(getName());
 		if (!StringUtils.isEmpty(queryEmpid)){
