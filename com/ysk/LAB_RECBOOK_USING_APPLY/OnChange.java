@@ -11,8 +11,11 @@ public class OnChange extends _hproc {
 		String queryEmpid = getValue(getName());
 		if (!StringUtils.isEmpty(queryEmpid)){
 			UserInfoViewBean nowUser = getUserInfo(getValue(getName()));
-			setValue("QUERY_REQ_EMPID_NAME", nowUser.getHecname());
-			setValue("QUERY_REQ_DEPT_NAME", nowUser.getDepName());
+			if (nowUser != null){
+				setValue("QUERY_REQ_EMPID_NAME", nowUser.getHecname());
+				setValue("QUERY_REQ_DEPT_NAME", nowUser.getDepName());
+			}
+			
 		}else{
 			setValue("QUERY_REQ_EMPID_NAME", "");
 			setValue("QUERY_REQ_DEPT_NAME", "");
