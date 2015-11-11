@@ -1,5 +1,4 @@
 package com.ysk.LAB_RECBOOK_USING_APPLY;
-
 //import com.ysk.bean.UserInfoViewBean;
 import SomeUtils._hproc;
 
@@ -18,7 +17,8 @@ public class DoAdd extends _hproc {
 		String[][] ret = selectFromWhere("PNO", nowTable, condition);
 		if (checkEmpty(field)) {
 			if (ret.length == 0) {
-				DoInster(nowTable);
+				DoInster(nowTable,"填單人確認");
+				
 			} else {
 				message("此紀錄簿 編號:" + getValue("RECBOOK_NO") + " 已有人先行申請!");
 			}
