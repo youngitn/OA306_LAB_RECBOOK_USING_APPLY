@@ -6,6 +6,11 @@ import SomeUtils._hproc;
 import SomeUtils.Bean.QueryItem;
 import SomeUtils.Bean.UserInfoViewBean;
 
+/**
+ * 執行查詢的動作在此設計
+ * @author b0050
+ *
+ */
 public class DoQuery extends _hproc {
 	@Override
 	public String action(String value) throws Throwable {

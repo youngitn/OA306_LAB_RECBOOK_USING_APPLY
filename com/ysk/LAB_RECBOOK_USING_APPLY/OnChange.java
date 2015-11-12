@@ -5,6 +5,11 @@ import org.apache.commons.lang.StringUtils;
 import SomeUtils._hproc;
 import SomeUtils.Bean.UserInfoViewBean;
 
+/**
+ * 當某個欄位變化時的事件處理.
+ * @author b0050
+ *
+ */
 public class OnChange extends _hproc {
 	@Override
 	public String action(String value) throws Throwable {

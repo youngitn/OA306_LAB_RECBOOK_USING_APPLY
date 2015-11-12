@@ -4,6 +4,12 @@ package com.ysk.LAB_RECBOOK_USING_APPLY;
 import SomeUtils._bproc;
 import SomeUtils.Bean.UserInfoViewBean;
 
+/**
+ * 用來在表格中做為按鈕,顯示詳細資料.<br>
+ * 用於emaker設計模式中,進入表格欄位,預設值.
+ * @author b0050
+ *
+ */
 public class QueryTableButton_Detail extends _bproc {
 
 	@Override

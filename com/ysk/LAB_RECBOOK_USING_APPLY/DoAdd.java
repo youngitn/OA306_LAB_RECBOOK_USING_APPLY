@@ -2,6 +2,11 @@ package com.ysk.LAB_RECBOOK_USING_APPLY;
 //import com.ysk.bean.UserInfoViewBean;
 import SomeUtils._hproc;
 
+/**
+ * 新增資料在此設計
+ * @author b0050
+ *
+ */
 public class DoAdd extends _hproc {
 	String nowTable = "LAB_RECBOOK_USING_APPLY";
 
