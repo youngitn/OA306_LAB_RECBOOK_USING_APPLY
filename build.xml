@@ -9,8 +9,13 @@
 				<!--<exclude name="**/*.class"/>-->
 			</fileset>
 		</copy>
-		
-		
+		<copy encoding="UTF-8" includeemptydirs="false" todir="Z:\babylon\yskoa_uat\com\ysk\LAB_RECBOOK_USING_APPLY\Rule">
+			<fileset dir="com\ysk\LAB_RECBOOK_USING_APPLY\Rule">
+				<!--<exclude name="**/*.class"/>-->
+			</fileset>
+		</copy>
+
+
 	</target>
 </project>
 
