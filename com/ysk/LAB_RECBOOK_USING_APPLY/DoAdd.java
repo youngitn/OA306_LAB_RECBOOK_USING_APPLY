@@ -1,9 +1,18 @@
 package com.ysk.LAB_RECBOOK_USING_APPLY;
+
+import java.util.Vector;
+
+import org.apache.commons.lang.StringUtils;
+
+import com.ysk.field.Flow;
+import com.ysk.service.BaseService;
+
 //import com.ysk.bean.UserInfoViewBean;
 import SomeUtils._hproc;
 
 /**
  * 新增資料在此設計
+ * 
  * @author b0050
  *
  */
@@ -22,14 +31,16 @@ public class DoAdd extends _hproc {
 		String[][] ret = selectFromWhere("PNO", nowTable, condition);
 		if (checkEmpty(field)) {
 			if (ret.length == 0) {
-				DoInster(nowTable,"填單人確認");
-				
+				DoInster(nowTable, "課主管");
+				sendEmailAfterAdd(getValue("REQ_EMPID").trim(),"SUB:課主管","內容:課主管",null,"",Flow.FLOW_SING_LEVEL_11);
 			} else {
 				message("此紀錄簿 編號:" + getValue("RECBOOK_NO") + " 已有人先行申請!");
 			}
 		}
 		return value;
 	}
+
+	
 
 	public String getInformation() {
 		return "---------------DO_QUERY(\u9001\u51fa\u67e5\u8a62).html_action()----------------";
