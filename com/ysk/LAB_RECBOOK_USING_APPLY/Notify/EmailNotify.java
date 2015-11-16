@@ -1,5 +1,8 @@
 package com.ysk.LAB_RECBOOK_USING_APPLY.Notify;
 //com/ysk/LAB_RECBOOK_USING_APPLY/Notify/EmailNotify
+import java.util.Vector;
+
+import jcx.util.convert;
 import SomeUtils._bNotify;
 
 import com.ysk.service.BaseService;
@@ -12,14 +15,24 @@ public class EmailNotify extends _bNotify {
 		// TODO Auto-generated method stub
 		service = new BaseService();
 		// get sign people
+		Vector<?> vid = getEngagedPeople();
+		if (vid.size() == 0)
+			return;
+
 		
-		
-		String content = "¦¬¥ó¤H:";
-		String title  = "45654";
+		Vector<String> V2 = new Vector<String>();
+		for (int i = 0; i < vid.size(); i++) {
+			V2.addElement(getEmail((String) vid.elementAt(i)));
+			
+		}
+		if (V2.size() == 0)
+			return;
+		String content = getState();
+		String title  = getState();
 		
 
-		//String usr[] = ((String[]) V2.toArray(new String[0]));
-		String usr[] ={"b0050@yungshingroup.com"};
+		String usr[] = ((String[]) V2.toArray(new String[0]));
+		
 		String sendRS = service.sendMailbccUTF8(usr, title, content, null, "",
 				"text/html");
 		if (sendRS.trim().equals("")) {
