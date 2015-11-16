@@ -1,14 +1,9 @@
 package com.ysk.LAB_RECBOOK_USING_APPLY;
 
-import java.util.Vector;
-
-import org.apache.commons.lang.StringUtils;
-
-import com.ysk.field.Flow;
-import com.ysk.service.BaseService;
-
 //import com.ysk.bean.UserInfoViewBean;
 import SomeUtils._hproc;
+
+import com.ysk.field.Flow;
 
 /**
  * 新增資料在此設計
