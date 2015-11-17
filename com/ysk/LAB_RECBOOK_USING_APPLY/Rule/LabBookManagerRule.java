@@ -12,7 +12,7 @@ import com.ysk.util.LogUtil;
 
 /**
  * 實驗室紀錄簿管理人簽核關卡, 在此會判斷申請者部門決定簽核者是誰.
- * 
+ * 實驗室紀錄簿相關表單共用此規則.
  * @see 簽核群組號碼設定檔: LAB_RECBOOK_USING_APPLY_RULE_CONFIG.java.
  * @author b0050
  *
