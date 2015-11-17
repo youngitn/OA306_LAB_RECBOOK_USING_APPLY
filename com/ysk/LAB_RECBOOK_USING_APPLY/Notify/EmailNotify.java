@@ -2,7 +2,6 @@ package com.ysk.LAB_RECBOOK_USING_APPLY.Notify;
 //com/ysk/LAB_RECBOOK_USING_APPLY/Notify/EmailNotify
 import java.util.Vector;
 
-import jcx.util.convert;
 import SomeUtils._bNotify;
 
 import com.ysk.service.BaseService;
