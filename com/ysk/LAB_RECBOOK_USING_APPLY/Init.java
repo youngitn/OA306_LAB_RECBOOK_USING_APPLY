@@ -20,7 +20,15 @@ public class Init extends _hproc {
 		setValue("REQ_EMPID", getUser());
 		setValue("REQ_EMPID_NAME", nowUser.getHecname());
 		setValue("REQ_DEPT_NAME", nowUser.getDepName());
-
+		if (POSITION == 5 && getState().equals("紀錄簿管理人")){
+			setEditable("RECBOOK_NO", true);
+			//去除空白
+			if (getValue("RECBOOK_NO").trim().length() == 0){
+				setValue("RECBOOK_NO","");
+			}
+			
+		}
+		
 		return null;
 	}
 
