@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import SomeUtils._hproc;
 import SomeUtils.Bean.QueryItem;
 import SomeUtils.Bean.UserInfoViewBean;
+import SomeUtils.DAO.UserInfoViewDAO;
 
 /**
  * 執行查詢的動作在此設計
@@ -34,8 +35,9 @@ public class DoQuery extends _hproc {
 				"簽核狀態", 0));
 		list.add(new QueryItem("'簽核紀錄'", "簽核紀錄", 0));
 		list.add(new QueryItem("'詳細資訊'", "詳細資訊", 0));
-
-		UserInfoViewBean user = getUserInfo(getUser());
+		UserInfoViewDAO ud = new UserInfoViewDAO(getTalk());
+		UserInfoViewBean user = ud.getUserInfo(getUser());
+		ud = null;
 		String otherConditionString = "";
 
 		// 研發"處" 所以取ParentNo
