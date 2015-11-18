@@ -17,7 +17,7 @@ public class DoAdd extends _hproc {
 	@Override
 	public String action(String value) throws Throwable {
 
-		String[][] field = { { "RECBOOK_NO", "紀錄簿編號" },
+		String[][] field = { 
 				{ "RECBOOK_NAME", "紀錄簿名稱" }, { "REC_START_DATE", "紀錄開始日期" },
 				{ "REC_END_DATE", "紀錄節結束日期" } };
 		String condition = "RECBOOK_NO = '" + getValue("RECBOOK_NO")
