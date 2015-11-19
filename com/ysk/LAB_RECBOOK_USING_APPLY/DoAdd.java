@@ -20,8 +20,7 @@ public class DoAdd extends _hproc {
 		String[][] field = { 
 				{ "RECBOOK_NAME", "紀錄簿名稱" }, { "REC_START_DATE", "紀錄開始日期" },
 				{ "REC_END_DATE", "紀錄節結束日期" } };
-		String condition = "RECBOOK_NO = '" + getValue("RECBOOK_NO")
-				+ "' and REC_START_DATE <= '" + getValue("REC_START_DATE")
+		String condition =" REQ_EMPID = '"+getValue("REQ_EMPID").trim()+"' and REC_START_DATE >= '" + getValue("REC_START_DATE").trim()
 				+ "'";
 		String[][] ret = selectFromWhere("PNO", nowTable, condition);
 		if (checkEmpty(field)) {
@@ -29,7 +28,7 @@ public class DoAdd extends _hproc {
 				DoInster(nowTable, "課主管");
 				sendEmailAfterAdd(getValue("REQ_EMPID").trim(),"SUB:課主管","內容:課主管",null,"",Flow.FLOW_SING_LEVEL_11);
 			} else {
-				message("此紀錄簿 編號:" + getValue("RECBOOK_NO") + " 已有人先行申請!");
+				message("此申請者所輸入的\"紀錄開始日期\"在系統中有大於該日期的資料存在,請重新輸入!");
 			}
 		}
 		return value;
