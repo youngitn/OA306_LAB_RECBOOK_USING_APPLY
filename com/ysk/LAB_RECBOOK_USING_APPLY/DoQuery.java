@@ -13,6 +13,7 @@ import SomeUtils.DAO.UserInfoViewDAO;
  *
  */
 public class DoQuery extends _hproc {
+	
 	@Override
 	public String action(String value) throws Throwable {
 		// 建立table header,與設計模式的表格欄位順序一致.
