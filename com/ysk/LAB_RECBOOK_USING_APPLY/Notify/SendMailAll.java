@@ -1,4 +1,5 @@
 package com.ysk.LAB_RECBOOK_USING_APPLY.Notify;
+
 // com/ysk/LAB_RECBOOK_USING_APPLY/Notify/SendMailAll
 import java.util.Arrays;
 import java.util.HashSet;
@@ -19,8 +20,12 @@ public class SendMailAll extends bProcFlow {
 		String sendRS = "";
 		String email;
 		String[] AllApprovePeople = getAllApprovePeople();
-		String title = getState();
-		String content = getState();
+		String title = "實驗室紀錄簿領用單,請進入系統簽核";
+		String content = "申請單號:" + getValue("PNO") + "<br>";
+		content += "申請開始日期:" + getValue("REC_START_DATE") + "<br>";
+		content += "申請結束日期:" + getValue("REC_END_DATE") + "<br>";
+		content += "申請人:" + getValue("REQ_EMPID") + "  "
+				+ getValue("REQ_EMPID_NAME") + "<br>";
 		int isEmailAllSend = 0;
 
 		for (String peopleString : AllApprovePeople) {
